@@ -13,25 +13,5 @@
         "language": "F#"
     },
     "sourceName": "AppName",
-    "preferNameDirectory": true,    
-    "symbols": {
-        "ProjectType": {
-            "type": "parameter",
-            "dataType": "choice",
-            "defaultValue": "basic",
-            "choices": [
-                {
-                    "choice": "basic",
-                    "description": "A minimal Falco app"
-                }
-            ]
-        }
-    },
-    "sources": [
-        {
-            "source": "./Basic/",
-            "target": "./",
-            "condition": "ProjectType== \"basic\""
-        }
-    ]
+    "preferNameDirectory": true
 }

@@ -20,7 +20,7 @@ Whenever there is a new version of the Falco template you can update it by re-ru
 You can also explicitly set the version when installing the template:
 
 ```
-dotnet new -i "Falco.Template::1.0.0"
+dotnet new -i "Falco.Template::5.0.0"
 ```
 
 ## Getting Started

@@ -1,40 +1,46 @@
 <Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <!-- General info -->
+        <Description>A dotnet-new template for Falco web applications.</Description>
+        <Copyright>Copyright 2025 Pim Brouwers</Copyright>
+        <Authors>Pim Brouwers, Angel Munoz and contributors</Authors>
+        <NeutralLanguage>en-CA</NeutralLanguage>
 
-  <PropertyGroup>
-    <!-- General info -->
-    <Description>A dotnet-new template for Falco web applications.</Description>
-    <Copyright>Copyright 2020 Pim Brouwers</Copyright>
-    <Authors>Pim Brouwers, Angel Munoz and contributors</Authors>
-    <NeutralLanguage>en-CA</NeutralLanguage>
+        <!-- Build config -->
+        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+        <DebugType>embedded</DebugType>
+        <OutputType>Library</OutputType>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
-    <!-- Build config -->
-    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
-    <DebugType>embedded</DebugType>
-    <OutputType>Library</OutputType>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <!-- NuGet config -->
+        <PackageType>Template</PackageType>
+        <PackageId>Falco.Template</PackageId>
+        <PackageVersion>5.0.1</PackageVersion>
+        <PackageTags>falco;web;app;razor;pages;micro;service;dotnet;new;template</PackageTags>
+        <PackageProjectUrl>https://github.com/pimbrouwers/Falco</PackageProjectUrl>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/pimbrouwers/Falco</RepositoryUrl>
 
-    <!-- NuGet config -->
-    <PackageType>Template</PackageType>
-    <PackageId>Falco.Template</PackageId>
-    <PackageVersion>5.0.0</PackageVersion>
-    <PackageTags>falco;web;app;razor;pages;micro;service;dotnet;new;template</PackageTags>
-    <PackageProjectUrl>https://github.com/pimbrouwers/Falco</PackageProjectUrl>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/pimbrouwers/Falco</RepositoryUrl>
+        <!-- SourceLink settings -->
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>true</IncludeSymbols>
+    </PropertyGroup>
 
-    <!-- SourceLink settings -->
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <IncludeSymbols>true</IncludeSymbols>
-  </PropertyGroup>
+    <ItemGroup>
+        <Content Include=".template.config\**\*" Pack="true" PackagePath=".template.config\" />
+        <Content Include="Basic\**\*" Pack="true" PackagePath="Basic\" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <Content Include="**\*" Exclude="**\bin\**;**\obj\**" />
-    <Compile Remove="**\*" />
-  </ItemGroup>
-
+    <ItemGroup>
+        <None Include="../../assets/icon.png">
+            <Pack>true</Pack>
+            <PackagePath>$(PackageIconUrl)</PackagePath>
+        </None>
+        <None Include="../../README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
 </Project>

@@ -1,14 +1,13 @@
 # Falco Template
 
 [![NuGet Version](https://img.shields.io/nuget/v/Falco.Template.svg)](https://www.nuget.org/packages/Falco.Template)
-[![Build Status](https://travis-ci.org/pimbrouwers/Falco.svg?branch=master)](https://travis-ci.org/pimbrouwers/Falco)
 
 ## Installation
 
 The easiest way to install the Falco template is by running the following command in your terminal:
 
 ```
-dotnet new -i "Falco.Template::*"
+> dotnet new install "Falco.Template::*"
 ```
 
 This will pull and install the latest [Falco.Template NuGet package](https://www.nuget.org/packages/Falco.Template/) into your .NET environment and make it available to subsequent `dotnet new` commands.
@@ -20,7 +19,7 @@ Whenever there is a new version of the Falco template you can update it by re-ru
 You can also explicitly set the version when installing the template:
 
 ```
-dotnet new -i "Falco.Template::5.0.0"
+> dotnet new install "Falco.Template::5.0.2"
 ```
 
 ## Getting Started
@@ -33,28 +32,23 @@ dotnet new falco
 
 This will generate a basic ASP.NET web application with Falco installed and activate, demonstrating some basic routing and output techniques.
 
-There are two other project types available, which can be accessed using the `-P` or `--ProjectType` argument:
-
-1. MVC - `dotnet new falco -P mvc`
-2. RESTful JSON API - `dotnet new falco -P rest`
-
-## Running locally
+## Running the template locally
 
 To try these templates locally from source:
 
 - `cd src/Templates`
-- `dotnet pack`
-- `dotnet new -i C:\PATH\TO\NUPKG\PACKAGE\Falco.Template.x.x.x.nupkg`
+- `dotnet pack --configuration Release`
+- `dotnet new install C:\PATH\TO\NUPKG\PACKAGE\Falco.Template.x.x.x.nupkg`
 
 To uninstall the local version
 
-- `dotnet new -u Falco.Templates`
+- `dotnet new uninstall Falco.Templates`
 
-### Adding a new project type
+## Find a bug?
 
-To add a new template you can do the following
+There's an [issue](https://github.com/FalcoFramework/Falco.Template/issues) for that.
 
-- `cd templates`
-- `dotnet new falco -o *` where `*` is the name of your next template.
 
-Update the code as needed and don't forget to add the project type to the `.template.config/template.json` file.
+## License
+
+Licensed under [Apache License 2.0](https://github.com/FalcoFramework/Falco.Template/blob/master/LICENSE).

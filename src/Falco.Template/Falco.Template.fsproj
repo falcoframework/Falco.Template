@@ -1,5 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
+        <AssemblyName>Falco.Template</AssemblyName>
+        <Version>5.0.2</Version>
+
         <!-- General info -->
         <Description>A dotnet-new template for Falco web applications.</Description>
         <Copyright>Copyright 2025 Pim Brouwers</Copyright>
@@ -17,13 +20,14 @@
         <!-- NuGet config -->
         <PackageType>Template</PackageType>
         <PackageId>Falco.Template</PackageId>
-        <PackageVersion>5.0.1</PackageVersion>
         <PackageTags>falco;web;app;razor;pages;micro;service;dotnet;new;template</PackageTags>
-        <PackageProjectUrl>https://github.com/pimbrouwers/Falco</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/FalcoFramework/Falco.Template</PackageProjectUrl>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <RepositoryType>git</RepositoryType>
-        <RepositoryUrl>https://github.com/pimbrouwers/Falco</RepositoryUrl>
+        <RepositoryUrl>https://github.com/FalcoFramework/Falco.Template</RepositoryUrl>
 
         <!-- SourceLink settings -->
         <PublishRepositoryUrl>true</PublishRepositoryUrl>

@@ -13,5 +13,11 @@
         "language": "F#"
     },
     "sourceName": "AppName",
-    "preferNameDirectory": true
+    "preferNameDirectory": true,
+    "sources": [
+        {
+            "source": "Basic",
+            "target": "./"
+        }
+    ]
 }

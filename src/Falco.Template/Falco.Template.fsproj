@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <AssemblyName>Falco.Template</AssemblyName>
-        <Version>5.0.2</Version>
+        <Version>5.0.3</Version>
 
         <!-- General info -->
         <Description>A dotnet-new template for Falco web applications.</Description>

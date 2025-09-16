@@ -6,7 +6,7 @@
 
 The easiest way to install the Falco template is by running the following command in your terminal:
 
-```
+```shell
 > dotnet new install "Falco.Template::*"
 ```
 
@@ -18,31 +18,36 @@ Whenever there is a new version of the Falco template you can update it by re-ru
 
 You can also explicitly set the version when installing the template:
 
-```
-> dotnet new install "Falco.Template::5.0.2"
+```shell
+> dotnet new install "Falco.Template::5.0.3"
 ```
 
 ## Getting Started
 
 After the template has been installed you can create a new Falco web application by simply running `dotnet new falco` in your terminal:
 
-```
-dotnet new falco
+```shell
+> dotnet new falco -o /path/to/app/MyFalcoAp
+> dotnet run --project /path/to/app/MyFalcoApp
 ```
 
 This will generate a basic ASP.NET web application with Falco installed and activate, demonstrating some basic routing and output techniques.
 
 ## Running the template locally
 
-To try these templates locally from source:
+To experiment with the template locally, from source:
 
-- `cd src/Templates`
-- `dotnet pack --configuration Release`
-- `dotnet new install C:\PATH\TO\NUPKG\PACKAGE\Falco.Template.x.x.x.nupkg`
+```shell
+> cd src/Templates
+> dotnet pack --configuration Release
+> dotnet new install /bin/Release/Falco.Template.5.0.3.nupkg
+```
 
-To uninstall the local version
+To uninstall the local version:
 
-- `dotnet new uninstall Falco.Templates`
+```shell
+> dotnet new uninstall Falco.Templates
+```
 
 ## Find a bug?
 
